@@ -1,0 +1,29 @@
+<head>
+  <link rel="import" href="../bower_components/paper-shadow/paper-shadow.html">
+  <link rel="import" href="../bower_components/core-image/core-image.html">
+  <link rel="import" href="../bower_components/polymer-simple-slider/src/simple-slider.html">
+</head>
+
+<polymer-element name="image-slider" attributes="images name description">
+  <template>
+    <link rel="stylesheet" href="../css/image-slider.css">
+    <paper-shadow z="2" class="card">
+      <a id="prev-button" class="slide-button" on-tap="{{onPrevButtonTapped}}"><</a>
+      <simple-slider id="simpleslider" style="width:100%; height:231px;">
+         <template repeat="{{image in images}}" >
+           <core-image class="image-slider-core-image" sizing="cover" src="{{image.image}}"></core-image>
+         </template>
+      </simple-slider>
+      <a id="next-button" class="slide-button" on-tap="{{onNextButtonTapped}}" style="right:0px;">></a>
+      <div style="padding: 10px;">
+        <div class="title">
+          {{name}}
+        </div>
+        <div class="description">
+          {{description}}
+        </div>
+      </div>
+    </paper-shadow>
+  </template>
+  <script src="../scripts/image-slider.js"></script>
+</polymer-element>

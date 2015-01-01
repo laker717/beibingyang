@@ -1,0 +1,24 @@
+<head>
+  <link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+  <link rel="import" href="../bower_components/core-pages/core-pages.html">
+  <link rel="import" href="house-list.html">
+  <link rel="import" href="house-details.html">
+</head>
+
+<polymer-element name="house-app" attributes="houses selectedHouse">
+  <template>
+    <link rel="stylesheet" href="../css/house-app.css">
+      <core-pages style="height:auto;position:static;" selected="{{page}}" valueattr="id">
+        <div id="houselist" class="main-div" vertical layout>
+          <div flex style="overflow:auto;">
+            <house-list houses="{{houses}}" selectedHouse="{{selectedHouse}}"></house-list>
+          </div>
+        </div>
+        <div id="housedetails" style="overflow: auto;">
+          <house-details houseDetails="{{selectedHouse}}" page="{{page}}"></house-details>
+        </div>
+      </core-pages>
+    <core-ajax id="dataajax" handleAs="json" on-core-response="{{dataLoaded}}"></core-ajax>
+  </template>
+  <script src="../scripts/house-app.js"></script>
+</polymer-element>

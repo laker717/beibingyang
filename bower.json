@@ -7,7 +7,11 @@
   "author": "",
   "private": true,
   "dependencies": {
-    "polymer": "Polymer/polymer#latest",
-    "paper-elements": "Polymer/paper-elements#latest"
+    "polymer": "Polymer/polymer#master",
+    "paper-elements": "Polymer/paper-elements#master",
+    "core-image": "Polymer/core-image",
+    "core-pages": "Polymer/core-pages",
+    "polymer-simple-slider": "ruyadorno/polymer-simple-slider",
+    "core-ajax": "Polymer/core-ajax"
   }
 }

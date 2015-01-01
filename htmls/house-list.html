@@ -1,0 +1,19 @@
+<head>
+  <link rel="import" href="../bower_components/paper-shadow/paper-shadow.html">
+  <link rel="import" href="../bower_components/core-image/core-image.html">
+</head>
+
+<polymer-element name="house-list" attributes="houses selectedHouse">
+  <template>
+    <link rel="stylesheet" href="../css/house-list.css">
+        <div>
+            <template repeat="{{house in houses}}" >
+              <paper-shadow z="2" class="card" on-tap="{{onHouseSelected}}">
+                <div class="title">{{house.name}}</div>
+                <core-image class="house-list-core-image" sizing="cover" src="{{house.mainImg}}"></core-image>
+              </paper-shadow>
+            </template>
+        </div>
+  </template>
+  <script src="../scripts/house-list.js"></script>
+</polymer-element>
