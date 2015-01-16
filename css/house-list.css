@@ -18,7 +18,23 @@ core-toolbar {
 }
 
 .house-list-core-image {
-  width: 100%;
-  height: 230px;
+  width: 70px;
+  height: 70px;
 }
 
+.house-list-row {
+  box-sizing: border-box;
+  height: 80px;
+  border-bottom: 1px solid #ddd;
+  padding: 4px;
+  cursor: default;
+  background-color: white;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.house-list-messages {
+  /*line-height: 167%;*/
+  height: 100%;
+  overflow: hidden;
+}

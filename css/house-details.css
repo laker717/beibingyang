@@ -5,27 +5,3 @@
   margin: 10px;
   overflow: auto;
 }
-
-.toolbar-left-most-button {
-  position: absolute;
-  left: 10px;
-  padding: 0;
-  top: 10px;
-}
-
-.toolbar-right-most-button {
-  position: absolute;
-  right: 10px;
-  padding: 0;
-  top: 10px;
-}
-
-:host paper-icon-button {
-  color: white;
-}
-
-core-toolbar {
-  border-color: #111;
-  background-color: #444444;
-  height: 44px;
-}

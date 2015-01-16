@@ -14,5 +14,8 @@ Polymer('house-app', {
   },
   selectedHouseChanged: function() {
     this.page = "housedetails";
+  },
+  goBack: function() {
+    this.page = "houselist";
   }
 });

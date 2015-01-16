@@ -10,12 +10,26 @@
     <link rel="stylesheet" href="../css/house-app.css">
       <core-pages style="height:auto;position:static;" selected="{{page}}" valueattr="id">
         <div id="houselist" class="main-div" vertical layout>
-          <div flex style="overflow:auto;">
+          <core-toolbar>
+            <paper-icon-button icon="menu" on-click="{{toggleDrawer}}"
+                class="toolbar-left-most-button" style="margin:0;"></paper-icon-button>
+            <paper-icon-button icon="search" on-click="{{toggleDrawer}}"
+                class="toolbar-right-most-button" style="margin:0;"></paper-icon-button>
+          </core-toolbar>
+          <div flux style="overflow:auto;">
             <house-list houses="{{houses}}" selectedHouse="{{selectedHouse}}"></house-list>
           </div>
         </div>
-        <div id="housedetails" style="overflow: auto;">
-          <house-details houseDetails="{{selectedHouse}}" page="{{page}}"></house-details>
+        <div id="housedetails" vertical layout>
+          <core-toolbar>
+            <paper-icon-button icon="arrow-back" on-click="{{goBack}}"
+              class="toolbar-left-most-button" style="margin:0;"></paper-icon-button>
+            <paper-icon-button icon="search" on-click="{{toggleDrawer}}"
+              class="toolbar-right-most-button" style="margin:0;"></paper-icon-button>
+          </core-toolbar>
+          <div flux style="overflow:auto;">
+            <house-details houseDetails="{{selectedHouse}}" page="{{page}}"></house-details>
+          </div>
         </div>
       </core-pages>
     <core-ajax id="dataajax" handleAs="json" on-core-response="{{dataLoaded}}"></core-ajax>

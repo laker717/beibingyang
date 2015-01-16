@@ -7,12 +7,6 @@
 <polymer-element name="house-details" attributes="houseDetails page">
   <template>
     <link rel="stylesheet" href="../css/house-details.css">
-    <core-toolbar>
-      <paper-icon-button icon="arrow-back" on-click="{{goBack}}"
-        class="toolbar-left-most-button" style="margin:0;"></paper-icon-button>
-      <paper-icon-button icon="search" on-click="{{toggleDrawer}}"
-        class="toolbar-right-most-button" style="margin:0;"></paper-icon-button>
-    </core-toolbar>
     <image-slider images="{{images}}" name="{{name}}" description="{{description}}"></image-slider>
   </template>
   <script src="../scripts/house-details.js"></script>

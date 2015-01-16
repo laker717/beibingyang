@@ -1,6 +1,7 @@
 <head>
   <link rel="import" href="../bower_components/paper-shadow/paper-shadow.html">
   <link rel="import" href="../bower_components/core-image/core-image.html">
+  <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
 </head>
 
 <polymer-element name="house-list" attributes="houses selectedHouse">
@@ -8,10 +9,16 @@
     <link rel="stylesheet" href="../css/house-list.css">
         <div>
             <template repeat="{{house in houses}}" >
-              <paper-shadow z="2" class="card" on-tap="{{onHouseSelected}}">
-                <div class="title">{{house.name}}</div>
-                <core-image class="house-list-core-image" sizing="cover" src="{{house.mainImg}}"></core-image>
-              </paper-shadow>
+              <div class="house-list-row" on-tap="{{onHouseSelected}}">
+                <div style="width:70px;height:70px;float:left;margin-right:10px;">
+                  <core-image class="house-list-core-image" sizing="cover" src="{{house.mainImg}}"></core-image>
+                </div>
+                <div class="house-list-messages">
+                  <div style="font-weight: bold;height:15px;margin-bottom:3px;">{{house.name}}</div>
+                  <div style="color: #cfcfcf;font-size:10px;overflow:hidden;height:30px;width:80%;margin-bottom:3px;" flux>{{house.description}}</div>
+                  <div style="color: orange;height:15px;">{{house.price}}</div>
+                </div>
+              </div>
             </template>
         </div>
   </template>
